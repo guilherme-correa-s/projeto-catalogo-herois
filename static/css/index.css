@@ -1,0 +1,366 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+:root{
+    --dc: #0583F2;
+    --marvel: #F20505;
+    --fundo: #1B242F;
+    --fundo-texto: #252934;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+nav ul li{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#home{
+    font-size: 4.5rem;
+}
+
+nav ul li:hover{
+    background-color: rgba(0, 0, 0, 0.219);
+}
+
+
+header{
+    background: linear-gradient(to right, var(--marvel), var(--dc));
+    width: 100vw;
+    height: 20vh;
+}
+
+header h1{
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+#container{
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    background: url(../img/DC\ MAV.jpg) no-repeat;
+    background-size: cover;
+}
+
+section{
+    width: 50%;
+    background-color: var(--fundo);
+    position: fixed;
+    margin: 0 auto;
+    padding-left: 23.5%;
+    display: flex;
+}
+
+#text-inicial{
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+    width: 50%;
+    height: 73%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    top: 21.5%;
+    justify-content: space-around;
+    padding-top: 1rem;
+    border-radius: 20px;
+}
+
+#container-btn{
+    display: flex;
+    position: fixed;
+    top: 85%;
+}
+
+.btn{
+    width: 6rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#btn-anterior{
+    display: none;
+}
+
+#btn-proximo{
+    display: block;
+    
+}
+
+#text-inicial p{ 
+    /* display: block; */
+    font-size: 1.7rem;
+    padding: 1rem;
+    text-align:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.page{
+    text-align: center;
+}
+
+/* #text{
+    display: block;
+} */
+
+#text-1{
+    display: block;
+}
+
+#text-2{
+    display: none;
+}
+
+#text-3{
+    display: none;
+}
+
+#text-4{
+    display: none;
+}
+
+#heroes-marvel{
+    width: 80%;
+    height: 80%;
+    display: none;
+}
+#heroes-dc{
+    width: 80%;
+    height: 80%;
+    display: none;
+}
+
+/*  */
+section div.img-dc{
+    width: 18rem; 
+    height: 80%;
+    margin: auto;
+}
+
+section div.img-dc img{
+    display: block;
+    margin: 0 auto;
+    /* padding: 1rem; */
+    width: 250px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+section div.img-dc h2{
+    text-align: center;
+    padding: 1rem;
+    color: var(--marvel);
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    /* text-shadow: 1vw 1vw 1vw var(--fundo-texto), 0 0 3vw white, 0 0 3vw white; */
+}
+section div.img-dc p{
+    text-align: justify;
+    color: whitesmoke;
+}
+
+#heroes-dc .img-dc{
+    width: 100%;
+    height: 80%;
+    /* display: none; */
+}
+
+div#heroes-dc div.img-dc h2{
+    color: var(--dc);
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    /* text-shadow: 1vw 1vw 1vw var(--fundo-texto), 0 0 3vw white, 0 0 3vw white; */
+}
+
+/*  */
+#heroes-marvel .img{
+    width: 100%;
+    height: 80%;
+    /* display: none; */
+}
+
+section div.img{
+    width: 18rem; 
+    height: 80%;
+    margin: auto;
+}
+
+section div.img img{
+    display: block;
+    margin: 0 auto;
+    /* padding: 1rem; */
+    width: 250px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+section div.img h2{
+    text-align: center;
+    padding: 1rem;
+    color: var(--marvel);
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    /* text-shadow: 1vw 1vw 1vw var(--fundo-texto), 0 0 3vw white, 0 0 3vw white; */
+}
+section div.img p{
+    text-align: justify;
+    color: whitesmoke;
+}
+
+article#left{
+    background: linear-gradient(to right,#F00506,#C91A2D);
+    width: 0%;
+    transition: all 1s;
+    position: relative;
+    /* border-right: 1px solid white; */
+}
+
+article#left:hover{
+    width: 20%;
+    display: block;
+}
+
+article#left ul#lista-marvel{
+    display: none;
+    padding-top: 40%;
+    padding-left: 15%;
+}
+
+article#left:hover ul#lista-marvel{
+    display: block;
+}
+
+article#left ul#lista-marvel li{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+article#left #marvel{
+    width: 190px;
+    position: absolute;
+    left: 0px;
+    padding-top: 10px;
+    padding-left: 70px;
+}
+
+article#right{
+    background: linear-gradient(to right,#3B66BB,var(--dc));
+    width: 0%;
+    transition: all 1s;
+    position: relative;
+}
+
+article#right:hover{
+    width: 23%;
+    display: block;
+
+}
+
+article#right #dc{
+    width: 100px;
+    position: absolute;
+    right: 120px;
+    border-radius: 50%;
+    padding-top: 5px;
+}
+
+article#right ul#lista-dc{
+    padding-top: 40%;
+    padding-left: 30%;
+    display: none;
+}
+
+article#right:hover ul#lista-dc{
+    display: block;
+}
+
+
+article#right ul#lista-dc li{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
+#text-open{
+    background-color: rgba(0, 0, 0, 0.788);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#text-open div{
+    position: absolute;
+    background-color: white;
+    top: 25%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    z-index: 999;
+    border-radius: 5%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#text-open div button{
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+}
+
+span{
+    font-size:3rem;
+    display: block;
+}

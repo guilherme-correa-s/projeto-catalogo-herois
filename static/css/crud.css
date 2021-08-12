@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    list-style: none;
+}
+:root{
+    --dc: #0583F2;
+    --marvel: #F20505;
+    --fundo: #010102;
+    /* --fundo-texto: #111016b6; */
+    --fundo-texto: #ffff;
+    --ver1:#FF241C;
+    --ver2:#80120E;
+    --ver3:#FF8A87;
+    --ver4:#802926;
+    --ver5:#CC1C16;
+    --az1:#0F84F2;
+    --az2:#58A9F4;
+    --az3:#073F73;
+    --az4:#0B68BF;
+    --az5:#294F73;
+}
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+nav#nav-bar{
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(to right, var(--marvel), var(--dc));
+    justify-content: center;
+    align-items: center;
+}
+
+nav#nav-bar ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+nav#nav-bar ul li{
+  color: white;
+  font-size: 2rem;
+}
+
+
+section#conteiner{
+    background-color: var(--fundo-texto);
+    width: 100vw;
+    height: 100vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  
+}
+a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+section#conteiner h3{
+    color: var(--dc);
+    font-size: 2rem;
+    padding: 1rem 0 1rem 0; 
+}
+/* section#conteiner div{
+    width: 70%;
+    height: 70%;
+    margin: auto;
+} */
+
+textarea{
+    color: var(--marvel);
+    background-color: var(--fundo-texto);
+    resize: none;
+    border: transparent;
+    border-top: .1rem solid black;
+}
+section#conteiner div#lista-heroes{
+    border:.1rem solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: .9rem;
+    background: var(--fundo-texto);
+    padding: 3rem;
+}
+section#conteiner div#lista-heroes h2{
+    color: var(--dc);
+    padding: 1rem;
+    text-align: center;
+}
+section#conteiner div#lista-heroes table tbody tr td{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border-top: .1rem solid var(--az3);
+    color: var(--dc);
+}
+
+section#conteiner div#lista-heroes table thead tr th{
+    color: black;
+}
+
+section form#formulario input{
+    color: var(--marvel);
+    margin: 1rem;
+    padding: .9rem;
+    width: 90%;
+    border: .1rem solid black;
+    border-radius: .9rem;
+    background-color: transparent;
+}
+
+section#conteiner div#lista-heroes table tbody tr td{
+    /* color: whitesmoke; */
+    font-size: 1.5rem;
+    width: 70%;
+    text-align: center;
+    align-items: center;
+}
+
+/* section#conteiner div#lista-heroes ul li div{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+} */
+
+section#conteiner div#lista-heroes table tbody tr td button.btn-editar{
+    font-size: .9rem;
+    color: var(--dc);
+    background-color: #fff; 
+    padding: .4rem;
+    margin: .1rem;
+    border: transparent;
+    border-radius: .7rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dc);
+    transition: all .5s ease-out;
+}
+
+section#conteiner div#lista-heroes table tbody tr td button.btn-editar:hover{
+    background-color: var(--dc);
+    color: #fff;
+}
+
+section#conteiner div#lista-heroes table tbody tr td button.btn-apagar{
+    font-size: .9rem;
+    color: var(--marvel);
+    background-color: #fff; 
+    padding: .4rem;
+    margin: .1rem;
+    border: transparent;
+    border-radius: .7rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--marvel);
+    transition: all .5s ease-out;
+}
+
+section#conteiner div#lista-heroes table tbody tr td button.btn-apagar:hover{
+    background-color: var(--marvel);
+    color: #fff;
+}
+
+#formulario{
+    margin-bottom: 3rem;
+    background-color: var(--fundo-texto);
+    border: 2px solid black;
+    border-radius: .9rem;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+form#formulario div#container-form{
+    padding: 1rem;
+    background-color: transparent;
+    width: 90%;
+}
+
+section div#container-form select{
+    margin: 1rem;
+    padding: .5rem;
+    width: 95%;
+    height: 25%;
+    border:.1rem solid black;
+    border-radius: .9rem;
+    background-color: transparent;
+    color: var(--marvel);
+}
+
+
+#formulario #descricao{
+    background-color: transparent;
+    color: var(--marvel);
+    /* height: 100%; */
+}
+
+section#conteiner div button.cp{
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    height: 25%;
+    border: transparent;
+    border-radius: .9rem;
+    /* background-color: rgb(68, 68, 68); */
+    color: black;  
+    transition: all .9s;
+}
+button.cp:hover{
+    /* transform: scale(1.05); */
+    background: linear-gradient(to right, var(--marvel), var(--dc));
+    color: white;
+}
+
+
+/* modal */
+section.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #00000080;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+  }
+  
+  section.modal div#card{
+    width: 30rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: .5rem;
+  }
+  
+  section.modal div#card h2{
+    padding: 2rem;
+    margin: 0;
+    color: var(--dc);
+  }
+  
+  section.modal div#card a#fechar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    color: var(--marvel);
+    padding: 1.5rem;
+  }
+  
+  section.modal div#card a#fechar:hover{
+    color: var(--marvel);
+  }
+  
+  section.modal div#card hr{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  section.modal div#card p{
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  section.modal div#card div#btns{
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 2rem 2rem;
+  }
+  
+  section.modal div#card div#btns a{
+    text-decoration: none;
+    padding: .9rem;
+    border-radius: .5rem;
+    width: 7rem;
+    text-align: center;
+  }
+  
+  section.modal div#card div#btns a.btn-cancelar{
+    background-color: #fff;
+    color: var(--marvel);
+    border: solid 1px var(--marvel);
+    margin-right: 1rem;
+    transition: all .5s ease-out;
+  }
+  
+  section.modal div#card div#btns a.btn-cancelar:hover{
+    background-color: var(--marvel);
+    color: #fff;
+  }
+  
+  section.modal div#card div#btns a.btn-apagar{
+    background-color: #fff;
+    color: var(--dc);
+    border: solid 1px var(--dc);
+    transition: all .5s ease-out;
+  }
+  
+  section.modal div#card div#btns a.btn-apagar:hover{
+    background-color: var(--dc);
+    color: #fff;
+  }
+
+  /* flash */
+  article#msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  article#msg ul {
+    z-index: 1;
+    width: 40%;
+    background-color: #c8ffcb;
+    color: #007a1f;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight:600;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 0 0 .5rem .5rem;
+    position: fixed;
+    top: 0;
+  }

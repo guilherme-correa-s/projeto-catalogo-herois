@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!-- fonte marvel -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <title>DC x Marvel</title>
+</head>
+
+<body>
+    <main>
+        <div id="text-open">
+            <div>
+                <button id="fechar-open">X</button>
+                <h1>Catalago sobre os personagens dos universos <span>DC e Marvel</span></h1>    
+            </div>
+        </div>
+        <header>
+            <nav id="nav">
+                <ul>
+                    <li><a href="/dev">Devs</a></li>
+                    <li id="home">MARVEL X DC COMICS</li>
+                    <li><a href="/login">ADM</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div id="container">
+            <article id="left">
+                <a href="/wikiM"><img id="marvel" src="../static/img/marvel.png" alt=""></a>
+                <ul id="lista-marvel">
+                    {% for hero in listaMarvel %}
+                    {% if hero.editora == 'marvel' %}
+                    <li><a class="link-lista-marvel" value='{{hero.id}}'> {{hero.nome}} </a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </article>
+            <section id="container-text">
+                <div id="text-inicial">
+                    <div id="text">
+                        <p id="text-1" class="page">
+                            Duas entidades irmãs conhecidas como Universo DC e Universo Marvel, se deram conta da
+                            existência uma do outro. Ambas concordaram com um desafio que envolvia uma série de duelos
+                            entre os
+                            super-heróis de seus respectivos universos, como consequência o universo perdedor deixa de
+                            existir.
+                        </p>
+                        <p id="text-2" class="page">
+                            Dessa forma, vários personagens trocam de universo ao serem atingidos por uma luz
+                            misteriosa,
+                            causando encontros e desencontros, confrontos e alianças. No meio da confusão, um jovem
+                            chamado Axel Asher encontra
+                            um velho mendigo em um beco, esse revela ser o protetor de um portal que se esconde em uma
+                            caixa
+                            de papelão e abriga a energia dos dois universos que estão se fundindo. É dessa caixa que
+                            partem os
+                            raios que trocam os personagens de universo.
+                        </p>
+                        <p id="text-3" class="page">
+                            O mendigo explica que os dois universos são “Irmãos em conflito” para saber quem é o mais
+                            forte. Ele também revela que Axel, assim como ele, nasceu como fragmento dos Irmãos e por
+                            isso tinha o dever de proteger o portal e poder de viajar entre os universos.
+                        </p>
+                        <p id="text-4" class="page">
+                            Para decidirem quem é o mais forte, cada universo escolhem campeões dentro dos seus
+                            universos e
+                            decidem que aquele que for derrotado
+                            será destruído.
+                        </p>
+                    </div>
+                    <div id="container-btn">
+                        <img id="btn-anterior" class="btn" src="../static/img/previous.png" alt="">
+                        <img id="btn-proximo" class="btn" src="../static/img/next.png" alt="">
+                    </div>
+                    <div id="heroes-marvel">
+                        {% for heroe in listaMarvel %}
+                        {% if heroe.editora == 'marvel' %}
+                        <div class="img" value="{{heroe.id}}" style="display: none;">
+                            <img src="{{heroe.foto}}" name='teste' alt="Foto de {{heroe.nome}}">
+                            <h2>{{heroe.nome}}</h2>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div id="heroes-dc">
+                        {% for heroe in listaDc %}
+                        {% if heroe.editora == 'dc' %}
+                        <div class="img-dc" value="{{heroe.id}}" style="display: none;">
+                            <img src="{{heroe.foto}}" name='teste' alt="Foto de {{heroe.nome}}">
+                            <h2>{{heroe.nome}}</h2>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <article id="right">
+                <a href="/wikiDc"><img id="dc" src="../static/img/dc.png" alt=""></a>
+                <ul id="lista-dc">
+                    {% for hero in listaDc %}
+                    {% if hero.editora == 'dc' %}
+                    <li><a class="link-dc" value="{{hero.id}}">{{hero.nome}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </article>
+        </div>
+    </main>
+
+    <script src="../static/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR                           ">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../static/css/wikiDC.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/wikiM">Marvel</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/login">ADM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="carousel">
+
+        {% for heroe in listaDc %}
+        {% if heroe.editora == 'dc' %}
+        <a class="carousel-item {{heroe.id}}" href=""><img src="{{heroe.foto}}"></a>
+        {% endif %}
+        {% endfor %}
+        
+    </div>
+
+    <article>
+        {% for heroe in listaDc %}
+        {% if heroe.editora == 'dc' %}
+        <div class="class-{{heroe.id}} descricao">
+            <h2>{{heroe.nome}}</h2>
+            <p>{{heroe.descricao}}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </article>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../static/js/wikiDC.js"></script>
+</body>
+
+</html>

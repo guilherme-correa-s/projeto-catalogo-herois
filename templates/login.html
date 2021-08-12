@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <article id="msg">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </article>
+  <header>
+    <nav>
+      <ul>
+        <a href="/wikiM">
+          <li>Marvel</li>
+        </a>
+        <a href="/">
+          <li>HOME</li>
+        </a>
+        <a href="wikiDc">
+          <li>DC</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <h2>Login</h2>
+  <div class="flip-container">
+    <div class="flipper">
+      <div class="front">
+        <img id="card" src="https://www.bugskull.com.br/wp-content/uploads/2019/07/ff.jpg" />
+      </div>
+      <div class="back">
+        <form action="/auth" method="POST">
+          <input type="password" name="senha" id="password" placeholder="Digite sua senha">
+          <button type="submit">acessar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../static/js/login.js"></script>
+</body>
+
+</html>
